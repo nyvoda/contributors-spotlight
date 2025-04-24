@@ -1,0 +1,26 @@
+{
+  "name": "contributors-spotlight",
+  "version": "1.0.0",
+  "description": "✨ Automatically generate a dynamic spotlight showcasing your GitHub contributors. 🌟 Highlight top contributors in your README or other markdown files with a single command. 🚀",
+  "keywords": [
+    "github",
+    "contributors",
+    "spotlight",
+    "open source"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2"
+  }
+}
