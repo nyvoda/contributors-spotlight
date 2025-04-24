@@ -1,7 +1,7 @@
 # GitHub Contributors Spotlight
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/contributors-spotlight/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Adeel91/contributors-spotlight/pulls)
 
 ✨ Automatically generate a dynamic spotlight showcasing your GitHub contributors. 🌟 This tool fetches your contributors and creates a well-formatted `CONTRIBUTORS.md` file showcasing:
 
