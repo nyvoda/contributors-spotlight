@@ -3,20 +3,23 @@ module.exports = {
     es2022: true,
     node: true
   },
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
+  plugins: ['@typescript-eslint'],
   rules: {
-    'no-console': 'warn',
-    'consistent-return': 'error',
-    'arrow-body-style': ['error', 'as-needed'],
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto'
-      }
-    ]
-  }
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'prettier/prettier': 'error'
+  },
+  ignorePatterns: ['dist/**', 'node_modules/**']
 };
