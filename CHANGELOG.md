@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.0...v1.0.1) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** add automated contributors update workflow ([39b394c](https://github.com/Adeel91/contributors-spotlight/commit/39b394c463d8e6eb7149abe97841bd457290a8bd))
+
 # 1.0.0 (2025-04-26)
 
 
