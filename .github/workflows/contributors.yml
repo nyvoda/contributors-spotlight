@@ -2,7 +2,7 @@ name: 🛠️ Update Contributors
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/2 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,8 +29,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Update contributors
-        run: npx all-contributors add
+      - name: Build and generate contributors
+        run: |
+          yarn build
+          yarn generate
+          yarn clean
+          git checkout dist/
 
       - name: Commit changes
         run: |
