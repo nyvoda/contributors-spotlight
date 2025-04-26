@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.3...v1.0.4) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** pulled latest changes before writing to contributors list ([f487162](https://github.com/Adeel91/contributors-spotlight/commit/f4871626f8ceac0750dfb8569ba4f17715113b6b))
+
 ## [1.0.3](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.2...v1.0.3) (2025-04-26)
 
 
