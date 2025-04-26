@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.4...v1.0.5) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** first commit local changes then pulled changes then pushed ([c815389](https://github.com/Adeel91/contributors-spotlight/commit/c815389e20bf528bd45b4284cb4f75082e0cb707))
+
 ## [1.0.4](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.3...v1.0.4) (2025-04-26)
 
 
