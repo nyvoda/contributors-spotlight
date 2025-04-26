@@ -42,11 +42,21 @@ jobs:
 
       - name: Commit and push changes
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # First commit any local changes
           git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update contributors list [skip ci]"
+          fi
+
+          # Then pull with rebase
           git pull --rebase origin main
-          git commit -m "🤖 chore: update contributors list [skip ci]" || echo "No changes to commit"
+          
+          # Finally push changes
           git push origin main
