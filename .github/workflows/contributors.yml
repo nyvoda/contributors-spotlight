@@ -2,7 +2,7 @@ name: 🛠️ Update Contributors
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -34,7 +34,6 @@ jobs:
           yarn build
           yarn generate
           yarn clean
-          git checkout dist/
 
       - name: Commit changes
         run: |

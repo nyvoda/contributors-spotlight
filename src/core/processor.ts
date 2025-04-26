@@ -5,7 +5,7 @@ export class ContributorProcessor {
     const { maxContributors = 20, excludeBots = true, excludeOrgs = true } = options;
 
     return contributors
-      .filter(c => !excludeBots || c.type === 'User')
+      .filter(c => !excludeBots || (c.type === 'User' && !c.login.includes('bot')))
       .filter(c => !excludeOrgs || !c.login.includes('[bot]'))
       .sort((a, b) => b.contributions - a.contributions)
       .slice(0, maxContributors);
