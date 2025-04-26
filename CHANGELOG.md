@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.1...v1.0.2) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** processed bots from contributors list and adjusted yml file ([c516bc1](https://github.com/Adeel91/contributors-spotlight/commit/c516bc17fec92ccc97773e885878e442cee0796e))
+
 ## [1.0.1](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.0...v1.0.1) (2025-04-26)
 
 
