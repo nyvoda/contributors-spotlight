@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.2...v1.0.3) (2025-04-26)
+
+
+### Bug Fixes
+
+* **ci:** resolved remote permission to write in repository ([e0cd7c9](https://github.com/Adeel91/contributors-spotlight/commit/e0cd7c924e250a8d73b939dc6d63e383281f21cd))
+
 ## [1.0.2](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.1...v1.0.2) (2025-04-26)
 
 
