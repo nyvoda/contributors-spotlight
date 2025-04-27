@@ -38,8 +38,16 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Ensure the npm token is set as a secret
 
       # Step 3.5: Print npm token if it exists or not
-      - name: Debug npm token
-        run: echo "NPM_TOKEN=${{ secrets.NPM_TOKEN }}"
+      - name: Debug npm auth token
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npm whoami --registry=https://registry.npmjs.org/ --_authToken=${NPM_TOKEN}
+
+      - name: Verify npm token
+        run: npm whoami --registry=https://registry.npmjs.org/ --_authToken=${{ secrets.NPM_TOKEN }} --verbose
+
+      - name: Clear npm cache
+        run: npm cache clean --force
 
       # Step 4: Install dependencies using Yarn
       - name: Install Dependencies (Yarn)
