@@ -3,13 +3,12 @@ name: 🛠️ Release
 on:
   push:
     branches:
-      - main  # Trigger release on push to main branch
+      - main
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
       pull-requests: write
@@ -17,50 +16,36 @@ jobs:
       statuses: write
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensures the entire history is available for semantic-release
+          fetch-depth: 0
           persist-credentials: true
 
-      # Step 2: Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Use Node.js version 20
-          registry-url: 'https://registry.npmjs.org/'  # Set the registry URL for npm
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
 
-      # Step 3: Configure npm authentication with the npm token
-      - name: Configure npm authentication
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Ensure the npm token is set as a secret
+      - name: Delete .npmrc (if exists)
+        run: rm -f .npmrc  # Removes project-level .npmrc to avoid conflicts
 
-      # Step 3.5: Print npm token if it exists or not
-      - name: Debug npm auth token
+      - name: Configure npm auth
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          npm whoami --registry=https://registry.npmjs.org/ --_authToken=${NPM_TOKEN}
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
 
-      - name: Verify npm token
-        run: npm whoami --registry=https://registry.npmjs.org/ --_authToken=${{ secrets.NPM_TOKEN }} --verbose
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
-      - name: Clear npm cache
-        run: npm cache clean --force
+      - name: Build (if needed)
+        run: yarn build
 
-      # Step 4: Install dependencies using Yarn
-      - name: Install Dependencies (Yarn)
-        run: yarn install --frozen-lockfile  # Ensures dependencies are installed from yarn.lock file
-
-      # Step 5: Build the project (if applicable)
-      - name: Build Project
-        run: yarn build  # Adjust this to your actual build step if needed
-
-      # Step 6: Run Semantic Release
       - name: Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # npm token for publishing
-          CI: true  # Ensures the environment is set as CI for semantic-release
-        run: yarn release  # Executes the release script (make sure your `package.json` has a `release` script)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Still needed for semantic-release
+          CI: true
+        run: yarn release
