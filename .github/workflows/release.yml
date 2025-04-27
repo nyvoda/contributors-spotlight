@@ -26,11 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install Dependencies (Yarn)
         run: yarn install --frozen-lockfile
 
+      - name: Build Project
+        run: yarn build
+
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn release

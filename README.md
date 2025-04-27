@@ -5,9 +5,9 @@
 
 ✨ Automatically generate a dynamic spotlight showcasing your GitHub contributors. 🌟 This tool fetches your contributors and creates a well-formatted `CONTRIBUTORS.md` file showcasing:
 
-- 🏆 **Top 5 Contributors** with avatars, names, and commit counts  
-- 🌟 **All Contributors** in a responsive grid layout  
-- 📅 **Auto-updating** timestamp  
+- 🏆 **Top 5 Contributors** with avatars, names, and commit counts
+- 🌟 **All Contributors** in a responsive grid layout
+- 📅 **Auto-updating** timestamp
 
 ## ✨ Features
 
@@ -25,3 +25,4 @@
    git clone git@github.com:Adeel91/contributors-spotlight.git
    cd contributors-spotlight
    npm install
+   ```
