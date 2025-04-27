@@ -37,6 +37,10 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Ensure the npm token is set as a secret
 
+      # Step 3.5: Print npm token if it exists or not
+      - name: Debug npm token
+        run: echo "NPM_TOKEN=${{ secrets.NPM_TOKEN }}"
+
       # Step 4: Install dependencies using Yarn
       - name: Install Dependencies (Yarn)
         run: yarn install --frozen-lockfile  # Ensures dependencies are installed from yarn.lock file
