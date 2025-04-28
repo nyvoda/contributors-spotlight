@@ -4,6 +4,8 @@
   "description": "✨ Automatically generate a dynamic spotlight showcasing your GitHub contributors. 🌟 Highlight top contributors in your README or other markdown files with a single command. 🚀",
   "type": "commonjs",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": {
     "name": "Muhammad Adeel",
     "email": "muhammad_adeel91@yahoo.com",
@@ -15,7 +17,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public",
