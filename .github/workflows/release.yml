@@ -1,4 +1,4 @@
-name: 🛠️ Release
+name: 🚀 Release
 
 on:
   push:
@@ -16,27 +16,50 @@ jobs:
       statuses: write
 
     steps:
-      - name: Checkout
+      # 1. Checkout with full history
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          persist-credentials: true
+          fetch-depth: 0  # Required for semantic-release to analyze commits
+          persist-credentials: false  # More secure than true
 
+      # 2. Setup Node.js with npm registry
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
+          cache: 'yarn'  # Cache yarn dependencies for faster builds
 
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+      # 3. Clean up any existing .npmrc files
+      - name: Remove conflicting .npmrc files
+        run: |
+          rm -f .npmrc
+          rm -f ~/.npmrc
 
-      - name: Build (if needed)
+      # 4. Configure proper npm authentication
+      - name: Configure npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
+      # 5. Install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --production=false
+
+      # 6. Build step (remove if not needed)
+      - name: Build project
         run: yarn build
 
-      - name: Run Semantic Release
+      # 7. Run semantic-release with debug info
+      - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           CI: true
-        run: yarn release
+          DEBUG: semantic-release:*  # Enable debug output
+        run: |
+          npm config list
+          yarn release
