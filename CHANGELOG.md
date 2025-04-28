@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.1...v1.1.2) (2025-04-28)
+
+
+### Bug Fixes
+
+* **docs:** adjusted formatting and updated readme ([6c81fae](https://github.com/nyvoda/contributors-spotlight/commit/6c81faecedbda410118e9d96a34986c4b2a2a9bb))
+
 ## [1.1.1](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.0...v1.1.1) (2025-04-28)
 
 ### Bug Fixes
