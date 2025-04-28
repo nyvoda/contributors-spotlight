@@ -312,11 +312,6 @@
     proc-log "^5.0.0"
     which "^5.0.0"
 
-"@nyvoda/contributors-spotlight@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@nyvoda/contributors-spotlight/-/contributors-spotlight-1.1.2.tgz#0df693f532bc056f9c0f7ff55c4883ea93d8e8f0"
-  integrity sha512-zK8zYmCPUA/0SwyQO0lN2YeP4P8LgPRCAA1VCy898NK565Z+00K56FgZgC/JUsIFopnRD2wLTenEQ7LJk+v6dQ==
-
 "@octokit/auth-token@^5.0.0":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@octokit/auth-token/-/auth-token-5.1.2.tgz#68a486714d7a7fd1df56cb9bc89a860a0de866de"
