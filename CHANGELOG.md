@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.0...v1.1.1) (2025-04-28)
+
+
+### Bug Fixes
+
+* publish changes to npm registry ([2b9c591](https://github.com/nyvoda/contributors-spotlight/commit/2b9c591cb36796eb0f0750435899633a6195b8cf))
+
 # [1.1.0](https://github.com/nyvoda/contributors-spotlight/compare/v1.0.5...v1.1.0) (2025-04-28)
 
 
