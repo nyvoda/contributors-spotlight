@@ -26,7 +26,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Configure npm for GitHub Packages
         run: |
@@ -37,10 +39,6 @@ jobs:
       - name: Configure npm for public npm registry
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-
-
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
 
       - name: Build (if needed)
         run: yarn build
