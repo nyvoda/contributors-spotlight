@@ -22,7 +22,14 @@
 1. **Add to your repository**:
 
    ```bash
-   git clone git@github.com:Adeel91/contributors-spotlight.git
+   git clone git@github.com:nyvoda/contributors-spotlight.git
    cd contributors-spotlight
    npm install
+   ```
+
+   Or, install the package from npm registry
+
+   ```bash
+   npm install @nyvoda/contributors-spotlight
+   yarn install @nyvoda/contributors-spotlight
    ```

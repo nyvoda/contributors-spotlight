@@ -1,6 +1,6 @@
 {
   "name": "@nyvoda/contributors-spotlight",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "✨ Automatically generate a dynamic spotlight showcasing your GitHub contributors. 🌟 Highlight top contributors in your README or other markdown files with a single command. 🚀",
   "type": "commonjs",
   "license": "MIT",
@@ -14,8 +14,12 @@
     "url": "https://github.com/nyvoda/contributors-spotlight"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "github",
     "contributors",

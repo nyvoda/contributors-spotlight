@@ -28,15 +28,6 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
 
-      - name: Delete .npmrc (if exists)
-        run: rm -f .npmrc  # Removes project-level .npmrc to avoid conflicts
-
-      - name: Configure npm auth
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
-          echo "always-auth=true" >> ~/.npmrc
-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
@@ -46,6 +37,6 @@ jobs:
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # Still needed for semantic-release
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           CI: true
         run: yarn release
