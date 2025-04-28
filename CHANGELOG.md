@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/nyvoda/contributors-spotlight/compare/v1.0.5...v1.1.0) (2025-04-28)
+
+
+### Bug Fixes
+
+* **ci:** published npm package using semantic release ([cfee2a9](https://github.com/nyvoda/contributors-spotlight/commit/cfee2a99c9801c064e5cc42aaf057c3aa10c6a8d))
+
+
+### Features
+
+* **release:** prepare initial npm package publishing ([24d8ead](https://github.com/nyvoda/contributors-spotlight/commit/24d8ead9d47bdf78a1a469cb8cbbfef8bd84c452))
+
 ## [1.0.5](https://github.com/Adeel91/contributors-spotlight/compare/v1.0.4...v1.0.5) (2025-04-26)
 
 ### Bug Fixes
