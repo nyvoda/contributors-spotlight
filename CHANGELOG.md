@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.3...v1.1.4) (2025-04-28)
+
+
+### Bug Fixes
+
+* **docs:** added project usage to display contributors ([7384fca](https://github.com/nyvoda/contributors-spotlight/commit/7384fca621004e893a62780ccb624f05371c7134))
+
 ## [1.1.3](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.2...v1.1.3) (2025-04-28)
 
 
