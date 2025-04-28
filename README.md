@@ -25,7 +25,7 @@ You can install the `@nyvoda/contributors-spotlight` package via npm:
 
 ```bash
 npm install @nyvoda/contributors-spotlight
-````
+```
 
 Or using Yarn
 
