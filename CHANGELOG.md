@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.2...v1.1.3) (2025-04-28)
+
+
+### Bug Fixes
+
+* add index.ts as entry point for package ([a24878e](https://github.com/nyvoda/contributors-spotlight/commit/a24878e633cfe81a44959419c5198511cf9187f8))
+
 ## [1.1.2](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.1...v1.1.2) (2025-04-28)
 
 
