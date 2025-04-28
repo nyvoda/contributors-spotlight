@@ -2,7 +2,7 @@
 
 Here are the amazing developers who contributed to this project:
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;"><a href="https://github.com/Adeel91" title="Adeel91 (27 commits)">
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;"><a href="https://github.com/Adeel91" title="Adeel91 (46 commits)">
     <img src="https://avatars.githubusercontent.com/u/14883750?v=4?s=100&r=g" width="100" style="border-radius:50%" alt="{{USERNAME}}"/>
 </a>
 </div>
@@ -10,13 +10,14 @@ Here are the amazing developers who contributed to this project:
 ## 🌟 All Contributors
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px 0;">
-<a href="https://github.com/Adeel91" title="Adeel91 (27 commits)">
+<a href="https://github.com/Adeel91" title="Adeel91 (46 commits)">
     <img src="https://avatars.githubusercontent.com/u/14883750?v=4?s=80&r=g" width="80" style="border-radius:50%" alt="{{USERNAME}}"/>
 </a>
 
 </div>
 
+
 ---
 
-_✨ This list is automatically generated - last updated on April 27, 2025_  
+_✨ This list is automatically generated - last updated on April 28, 2025_  
 _💖 Thank you to all our contributors!_
