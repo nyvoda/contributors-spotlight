@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.4...v1.2.0) (2025-04-29)
+
+
+### Bug Fixes
+
+* formatted .md files ([0230c68](https://github.com/nyvoda/contributors-spotlight/commit/0230c68b9a4549c811966aac786ebd8fed8490ab))
+
+
+### Features
+
+* **ci:** switch contributor update to weekly PR flow ([98c08c6](https://github.com/nyvoda/contributors-spotlight/commit/98c08c69400ad37d19a24783f175da59a6073bd8))
+
 ## [1.1.4](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.3...v1.1.4) (2025-04-28)
 
 ### Bug Fixes
