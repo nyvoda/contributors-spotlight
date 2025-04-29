@@ -16,7 +16,6 @@ Here are the amazing developers who contributed to this project:
 
 </div>
 
-
 ---
 
 _✨ This list is automatically generated - last updated on April 28, 2025_  

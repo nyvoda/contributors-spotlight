@@ -1,23 +1,20 @@
 ## [1.1.4](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.3...v1.1.4) (2025-04-28)
 
-
 ### Bug Fixes
 
-* **docs:** added project usage to display contributors ([7384fca](https://github.com/nyvoda/contributors-spotlight/commit/7384fca621004e893a62780ccb624f05371c7134))
+- **docs:** added project usage to display contributors ([7384fca](https://github.com/nyvoda/contributors-spotlight/commit/7384fca621004e893a62780ccb624f05371c7134))
 
 ## [1.1.3](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.2...v1.1.3) (2025-04-28)
 
-
 ### Bug Fixes
 
-* add index.ts as entry point for package ([a24878e](https://github.com/nyvoda/contributors-spotlight/commit/a24878e633cfe81a44959419c5198511cf9187f8))
+- add index.ts as entry point for package ([a24878e](https://github.com/nyvoda/contributors-spotlight/commit/a24878e633cfe81a44959419c5198511cf9187f8))
 
 ## [1.1.2](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.1...v1.1.2) (2025-04-28)
 
-
 ### Bug Fixes
 
-* **docs:** adjusted formatting and updated readme ([6c81fae](https://github.com/nyvoda/contributors-spotlight/commit/6c81faecedbda410118e9d96a34986c4b2a2a9bb))
+- **docs:** adjusted formatting and updated readme ([6c81fae](https://github.com/nyvoda/contributors-spotlight/commit/6c81faecedbda410118e9d96a34986c4b2a2a9bb))
 
 ## [1.1.1](https://github.com/nyvoda/contributors-spotlight/compare/v1.1.0...v1.1.1) (2025-04-28)
 
